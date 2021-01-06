@@ -5,7 +5,7 @@
 # Copyright 2013-2016 Loftux AB, Peter Löfgren
 # Distributed under the Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)
 # -------
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+if [ -z $JAVA_HOME ]; then  export JAVA_HOME=`type -p javac|xargs readlink -f|xargs dirname|xargs dirname` fi
 export JRE_HOME=$JAVA_HOME/jre
 export PATH=$PATH:$HOME/bin:$JRE_HOME/bin
 export ALF_HOME=/opt/alfresco
