@@ -6,8 +6,8 @@
 # Distributed under the Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)
 # -------
 if [ -z $JAVA_HOME ]; then  export JAVA_HOME=`type -p javac|xargs readlink -f|xargs dirname|xargs dirname` fi
-export JRE_HOME=$JAVA_HOME/jre
-export PATH=$PATH:$HOME/bin:$JRE_HOME/bin
+
+export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export ALF_HOME=/opt/alfresco
 export CATALINA_HOME=$ALF_HOME/tomcat
 export CATALINA_PID="${ALF_HOME}/tomcat.pid"
