@@ -7,8 +7,8 @@
 # -------
 
     # JDK locations
-    export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-    export JRE_HOME=$JAVA_HOME/jre
+    if [ -z $JAVA_HOME ]; then  export JAVA_HOME=`type -p javac|xargs readlink -f|xargs dirname|xargs dirname` fi
+    if [ -z $JRE_HOME ]; then  export JRE_HOME=$JAVA_HOME/bin fi
 
     # User under which tomcat will run
     USER=alfresco
