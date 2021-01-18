@@ -46,4 +46,8 @@
   <user username="CN=Alfresco Repository Client, OU=Unknown, O=Alfresco Software Ltd., L=Maidenhead, ST=UK, C=GB" roles="repoclient" password="null"/>
 <!-- Solr -->
   <user username="CN=Alfresco Repository, OU=Unknown, O=Alfresco Software Ltd., L=Maidenhead, ST=UK, C=GB" roles="repository" password="null"/>
+<!-- Tomcat admin webapps -->  
+  <user username="manager" roles="manager,manager-gui,manager-status" password="manager"/>
+  <user username="manager2" roles="manager-jmx,manager-script" password="manager"/>
+  <user username="admin" roles="admin-gui" password="admin"/>  
 </tomcat-users>
